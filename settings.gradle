@@ -1,0 +1,3 @@
+include ':caldroid'
+include ':app'
+
