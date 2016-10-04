@@ -1,3 +1,3 @@
-include ':caldroid'
+include ':caldroid', ':dailycube'
 include ':app'
 

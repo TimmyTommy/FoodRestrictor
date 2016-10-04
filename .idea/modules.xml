@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/FoodRestrictor.iml" filepath="$PROJECT_DIR$/FoodRestrictor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/caldroid/caldroid.iml" filepath="$PROJECT_DIR$/caldroid/caldroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dailycube/dailycube.iml" filepath="$PROJECT_DIR$/dailycube/dailycube.iml" />
     </modules>
   </component>
 </project>

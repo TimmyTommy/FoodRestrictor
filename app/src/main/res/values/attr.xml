@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- repeat state -->
+    <attr name="action_state">
+        <enum name="full" value="0" />
+        <enum name="half" value="1" />
+        <enum name="empty" value="2" />
+    </attr>
+
+    <!-- custom repeat button -->
+    <declare-styleable name="DailyActionButton">
+        <attr name="action_state" />
+        <attr name="src_full" format="integer" />
+        <attr name="src_half" format="integer" />
+        <attr name="src_empty" format="integer" />
+    </declare-styleable>
+
+</resources> 

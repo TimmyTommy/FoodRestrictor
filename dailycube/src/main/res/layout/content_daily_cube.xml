@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="de.dthomalla.dailycube.DailyCubeActivity"
+    tools:showIn="@layout/activity_daily_cube">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:measureWithLargestChild="false" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:orientation="horizontal" >
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="empty"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="half"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="full"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="empty"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="half"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+
+        <de.dthomalla.foodrestrictor.DailyActivityButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:action_state="full"
+            app:src_full="@drawable/state0"
+            app:src_half="@drawable/state1"
+            app:src_empty="@drawable/state2" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="empty"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="half"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+
+            <de.dthomalla.foodrestrictor.DailyActivityButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:action_state="full"
+                app:src_full="@drawable/state0"
+                app:src_half="@drawable/state1"
+                app:src_empty="@drawable/state2" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
