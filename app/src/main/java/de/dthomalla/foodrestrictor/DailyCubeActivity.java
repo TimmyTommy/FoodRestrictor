@@ -46,8 +46,9 @@ public class DailyCubeActivity extends AppCompatActivity {
     }
 
     private String getFileDir(String folder) {
-        String fileDirPath = getFilesDir().getAbsolutePath();
-        File file = new File(fileDirPath + "/" + folder);
+//        String fileDirPath = getFilesDir().getAbsolutePath();
+//        File file = new File(fileDirPath + "/" + folder);
+        File file = getExternalFilesDir(folder);
         file.mkdir();
         if (!file.isDirectory()) {
             ErrorActivity.handleError(this, "Die benötigten Ordner für die Anwendung konnten nicht angelegt werden.");
@@ -57,7 +58,7 @@ public class DailyCubeActivity extends AppCompatActivity {
 
     private File getSaveFile(Date date){
         String timeStamp = new SimpleDateFormat("yyyy_MM_dd").format(date);
-        String fileName = String.format("Scave_%s.json", timeStamp);
+        String fileName = String.format("SavedDay_%s.json", timeStamp);
         return new File(mSaveDir, fileName);
     }
 
