@@ -17,7 +17,7 @@ import android.widget.Toast;
 public class DailyActivityButton extends ImageButton {
 
     private final int MAX_STATES= DailyActivityState.values().length;
-    int state;
+    int state = DailyActivityState.EMPTY.getValue();
 
     public DailyActivityButton(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -26,25 +26,25 @@ public class DailyActivityButton extends ImageButton {
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        float width = getMeasuredWidth();
-        float height = getMeasuredHeight();
-        Paint paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setStrokeWidth(7);
-        paint.setStyle(Paint.Style.STROKE);
-        int offset = 5;
-        int offset2 = offset+3;
-
         if (state != 0){
+            float width = getMeasuredWidth();
+            float height = getMeasuredHeight();
+            Paint paint = new Paint();
+            paint.setAntiAlias(true);
+            paint.setStrokeWidth(7);
+            paint.setStyle(Paint.Style.STROKE);
+            int offset = 5;
+            int offset2 = offset+3;
+
             Path path1 = new Path();
-            path1.reset(); // only needed when reusing this path for a new build
+            path1.reset();
             path1.moveTo(offset2, offset2);
             path1.lineTo(width - offset2, offset2);
             path1.lineTo(width - offset2, height - offset2);
             path1.lineTo(offset2, offset2);
 
             Path path2 = new Path();
-            path2.reset(); // only needed when reusing this path for a new build
+            path2.reset();
             path2.moveTo(offset2, offset2);
             path2.lineTo(offset2, height - offset2);
             path2.lineTo(width - offset2, height - offset2);
@@ -92,32 +92,34 @@ public class DailyActivityButton extends ImageButton {
     }
 
     public DailyActivityState getState() {
-        switch (state) {
-            case 0:
-                return DailyActivityState.EMPTY;
-            case 1:
-                return DailyActivityState.HALF;
-            case 2:
-                return DailyActivityState.FULL;
-            default:
-                return DailyActivityState.EMPTY;
-        }
+        return DailyActivityState.parseInt(state);
+//        switch (state) {
+//            case 0:
+//                return DailyActivityState.EMPTY;
+//            case 1:
+//                return DailyActivityState.HALF;
+//            case 2:
+//                return DailyActivityState.FULL;
+//            default:
+//                return DailyActivityState.EMPTY;
+//        }
     }
 
     public void setState(DailyActivityState state) {
-        switch (state) {
-            case EMPTY:
-                this.state=0;
-                break;
-            case HALF:
-                this.state=1;
-                break;
-            case FULL:
-                this.state=2;
-                break;
-            default:
-                break;
-        }
+        this.state = state.getValue();
+//        switch (state) {
+//            case EMPTY:
+//                this.state=0;
+//                break;
+//            case HALF:
+//                this.state=1;
+//                break;
+//            case FULL:
+//                this.state=2;
+//                break;
+//            default:
+//                break;
+//        }
         invalidate();
     }
 

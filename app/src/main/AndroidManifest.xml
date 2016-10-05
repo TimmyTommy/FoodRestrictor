@@ -25,6 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ErrorActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_error" >
+        </activity>
     </application>
 
 </manifest>

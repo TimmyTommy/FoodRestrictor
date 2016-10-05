@@ -4,4 +4,6 @@
     <string name="customize">Customize</string>
     <string name="show_dialog">Show Dialog</string>
     <string name="title_activity_daily_cube">DailyCubeActivity</string>
+    <string name="title_activity_error">Ein Fehler ist aufgetreten</string>
+    <string name="default_error_string">Beim Anzeigen des Fehlers ist ein Fehler aufgetreten.</string>
 </resources>
