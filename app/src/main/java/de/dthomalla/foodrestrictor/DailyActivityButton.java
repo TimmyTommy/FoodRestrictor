@@ -12,11 +12,12 @@ import android.widget.Toast;
  */
 public class DailyActivityButton extends ImageButton {
 
-    private final int MAX_STATES=3;
+    private final int MAX_STATES= DailyActivityState.values().length;
     int state;
     Drawable srcEmpty;
     Drawable srcHalf;
     Drawable srcFull;
+    Drawable srcEx;
     Context context;
 
     @Override
@@ -36,41 +37,30 @@ public class DailyActivityButton extends ImageButton {
     public DailyActivityButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context=context;
-
-        TypedArray a = context.obtainStyledAttributes(attrs,
-                R.styleable.DailyActionButton);
-
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DailyActionButton);
         try {
-
-            state = a
-                    .getInteger(R.styleable.DailyActionButton_action_state, 0);
-            srcEmpty = a
-                    .getDrawable(R.styleable.DailyActionButton_src_empty);
-            srcHalf = a
-                    .getDrawable(R.styleable.DailyActionButton_src_half);
-            srcFull = a
-                    .getDrawable(R.styleable.DailyActionButton_src_full);
-
-        } catch (Exception e) {
-
-        } finally {
+            state = a.getInteger(R.styleable.DailyActionButton_action_state, 0);
+            srcEmpty = a.getDrawable(R.styleable.DailyActionButton_src_empty);
+            srcHalf = a.getDrawable(R.styleable.DailyActionButton_src_half);
+            srcFull = a.getDrawable(R.styleable.DailyActionButton_src_full);
+            srcEx = a.getDrawable(R.styleable.DailyActionButton_src_back);
+        } catch (Exception e) {} finally {
             a.recycle();
         }
-
-        switch (state) {
-            case 0:
-                this.setImageDrawable(srcEmpty);
-                break;
-            case 1:
-                this.setImageDrawable(srcHalf);
-                break;
-            case 2:
-                this.setImageDrawable(srcFull);
-                break;
-            default:
-                break;
-
-        }
+        setStateBackground();
+//        switch (state) {
+//            case 0:
+//                this.setImageDrawable(srcEmpty);
+//                break;
+//            case 1:
+//                this.setImageDrawable(srcHalf);
+//                break;
+//            case 2:
+//                this.setImageDrawable(srcFull);
+//                break;
+//            default:
+//                break;
+//        }
     }
 
     @Override
@@ -79,45 +69,40 @@ public class DailyActivityButton extends ImageButton {
         nextState();
         setStateBackground();
         return true;
-
     }
 
     private void nextState() {
         state++;
-
         if (state == MAX_STATES) {
             state = 0;
         }
     }
 
     private void setStateBackground() {
-
         switch (state) {
             case 0:
-                this.setImageDrawable(srcEmpty);
-                showButtonText("Repeat Empty");
+                this.setBackground(srcEmpty);
                 break;
             case 1:
-                this.setImageDrawable(srcHalf);
-                showButtonText("Repeat Half");
+                this.setBackground(srcHalf);
                 break;
             case 2:
-                this.setImageDrawable(srcFull);
-                showButtonText("Repeat Full");
-
+                this.setBackground(srcFull);
                 break;
             default:
                 break;
-
+        }
+        if (srcEx != null){
+            this.setImageDrawable(srcEx);
+            this.setScaleType(ScaleType.FIT_CENTER);
         }
     }
+
     public void showButtonText(String text) {
-
         Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
-
     }
-    public DailyActivityState getRepeatState() {
 
+    public DailyActivityState getState() {
         switch (state) {
             case 0:
                 return DailyActivityState.EMPTY;
@@ -127,27 +112,23 @@ public class DailyActivityButton extends ImageButton {
                 return DailyActivityState.FULL;
             default:
                 return DailyActivityState.EMPTY;
-
         }
     }
 
-    public void setRepeatState(DailyActivityState repeatState) {
-
-        switch (repeatState) {
+    public void setState(DailyActivityState state) {
+        switch (state) {
             case EMPTY:
-                state=0;
-
+                this.state=0;
                 break;
             case HALF:
-                state=1;
+                this.state=1;
                 break;
             case FULL:
-                state=2;
+                this.state=2;
                 break;
             default:
                 break;
         }
-
         setStateBackground();
     }
 
