@@ -32,7 +32,7 @@ import java.util.Date;
 
 public class DailyCubeActivity extends AppCompatActivity {
 
-    final SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
+    final SimpleDateFormat formatter = new SimpleDateFormat("EEEE, dd MMM yyyy");
     private String mSaveDir;
     private Date mActiveDate = new Date();
 
@@ -78,7 +78,7 @@ public class DailyCubeActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setDisplayShowTitleEnabled(true);
-            actionBar.setTitle(formatter.format(mActiveDate));
+            actionBar.setTitle("  " + formatter.format(mActiveDate));
             actionBar.setLogo(R.mipmap.ic_launcher);
         }
     }
@@ -121,16 +121,16 @@ public class DailyCubeActivity extends AppCompatActivity {
 
             @Override
             public void onChangeMonth(int month, int year) {
-                String text = "month: " + month + " year: " + year;
-                Toast.makeText(getApplicationContext(), text,
-                        Toast.LENGTH_SHORT).show();
+//                String text = "month: " + month + " year: " + year;
+//                Toast.makeText(getApplicationContext(), text,
+//                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLongClickDate(Date date, View view) {
-                Toast.makeText(getApplicationContext(),
-                        "Long click " + formatter.format(date),
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),
+//                        "Long click " + formatter.format(date),
+//                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -176,7 +176,7 @@ public class DailyCubeActivity extends AppCompatActivity {
                         // Setup arguments
                         Bundle bundle = new Bundle();
                         // Setup dialogTitle
-                        dialogCaldroidFragment.setBackgroundDrawableForDate(new ColorDrawable(Color.GREEN) , mActiveDate);
+                        dialogCaldroidFragment.setBackgroundDrawableForDate(new ColorDrawable(Color.GREEN), mActiveDate);
                         dialogCaldroidFragment.setArguments(bundle);
                     }
 
